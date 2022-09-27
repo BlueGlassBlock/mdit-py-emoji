@@ -1,6 +1,6 @@
 [project]
 name = "mdit-py-emoji"
-version = "0.1.0"
+version = "0.0.1"
 description = "Emoji plugin for markdown-it-py."
 authors = [
     {name = "BlueGlassBlock", email = "blueglassblock@outlook.com"},

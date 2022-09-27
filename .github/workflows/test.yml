@@ -9,19 +9,18 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v3
-        name: Ensure Python Runtime
-        with:
-          python-version: '3.7'
-          architecture: 'x64'
+      - uses: actions/checkout@v3
 
-      - name: Install PDM
-        uses: pdm-project/setup-pdm@main
+    - uses: pdm-project/setup-pdm@main
+      name: Setup PDM
+      with:
+        python-version: 3.7  # Version range or exact version of a Python version to use, the same as actions/setup-python
+        architecture: x64    # The target architecture (x86, x64) of the Python interpreter. the same as actions/setup-python
+        enable-pep582: true  # Enable PEP 582 package loading globally
 
-      - name: Install Package
-        run: |
-          pdm install
+    - name: Install dependencies
+      run: pdm install       # Then you can use pdm in the following steps.
+
       - name: Test & Report
         run: |
           pdm run pytest
