@@ -1,0 +1,30 @@
+name: Test & Track
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v3
+        name: Ensure Python Runtime
+        with:
+          python-version: '3.7'
+          architecture: 'x64'
+
+      - name: Install PDM
+        uses: pdm-project/setup-pdm@main
+
+      - name: Install Package
+        run: |
+          pdm install
+      - name: Test & Report
+        run: |
+          pdm run pytest
+      - uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage.xml
