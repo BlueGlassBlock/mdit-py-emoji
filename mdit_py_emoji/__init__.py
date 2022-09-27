@@ -1,22 +1,24 @@
 import re
-from typing import Dict, List, Pattern, TypedDict, Union
+from typing import TYPE_CHECKING, Dict, List, Pattern, TypedDict, Union
 
 from markdown_it import MarkdownIt
 from markdown_it.token import Token
 
 from mdit_py_emoji.rule import EmojiRuleFunctor
 
+if TYPE_CHECKING:  # pragma: no cover
+    from typing import TypedDict
 
-class _Opts(TypedDict):
-    defs: Dict[str, str]
-    shortcuts: Dict[str, str]
-    pattern: Pattern[str]
+    class _Opts(TypedDict):
+        defs: Dict[str, str]
+        shortcuts: Dict[str, str]
+        pattern: Pattern[str]
 
 
 def _normalize_opts(
     defs: Union[Dict[str, str], None] = None,
     shortcuts: Union[Dict[str, List[str]], None] = None,
-) -> _Opts:
+) -> "_Opts":
     if defs is None:
         from . import data
 
@@ -33,7 +35,7 @@ def _normalize_opts(
     pattern = re.compile(
         "|".join(re.escape(i) for i in replacing) if replacing else "^$"
     )
-    return _Opts(defs=defs, shortcuts=shortcut_map, pattern=pattern)
+    return {"defs": defs, "shortcuts": shortcut_map, "pattern": pattern}
 
 
 def emoji_plugin(

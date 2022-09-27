@@ -32,5 +32,5 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
-python_files = "test.py"
+python_files = "mdit-py-emoji/test.py"
 addopts = "--cov=mdit_py_emoji --cov-report xml"
