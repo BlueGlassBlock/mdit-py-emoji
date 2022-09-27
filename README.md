@@ -2,6 +2,14 @@
 
 # mdit-py-emoji
 > Emoji plugin for markdown-it-py. Ported from https://github.com/markdown-it/markdown-it-emoji
+
+[![PyPI](https://img.shields.io/pypi/v/mdit-py-emoji)](https://pypi.org/project/mdit-py-emoji)
+[![Python Version](https://img.shields.io/pypi/pyversions/mdit-py-emoji)](https://pypi.org/project/mdit-py-emoji)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+[![License](https://img.shields.io/github/license/BlueGlassBlock/mdit-py-emoji)](https://github.com/BlueGlassBlock/mdit-py-emoji/blob/master/LICENSE)
+[![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
+
 </div>
 
 ## Usage

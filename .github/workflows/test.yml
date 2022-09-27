@@ -10,20 +10,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        name: Checkout
 
-    - uses: pdm-project/setup-pdm@main
-      name: Setup PDM
-      with:
-        python-version: 3.7  # Version range or exact version of a Python version to use, the same as actions/setup-python
-        architecture: x64    # The target architecture (x86, x64) of the Python interpreter. the same as actions/setup-python
-        enable-pep582: true  # Enable PEP 582 package loading globally
+      - uses: pdm-project/setup-pdm@main
+        name: Setup PDM
+        with:
+          python-version: 3.7  # Version range or exact version of a Python version to use, the same as actions/setup-python
+          architecture: x64    # The target architecture (x86, x64) of the Python interpreter. the same as actions/setup-python
+          enable-pep582: true  # Enable PEP 582 package loading globally
 
-    - name: Install dependencies
-      run: pdm install       # Then you can use pdm in the following steps.
+      - name: Install dependencies
+        run: pdm install       # Then you can use pdm in the following steps.
 
       - name: Test & Report
         run: |
           pdm run pytest
+
       - uses: codecov/codecov-action@v3
+        name: Upload Test Result
         with:
           files: ./coverage.xml
