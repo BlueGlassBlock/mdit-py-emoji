@@ -9,6 +9,7 @@
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 [![License](https://img.shields.io/github/license/BlueGlassBlock/mdit-py-emoji)](https://github.com/BlueGlassBlock/mdit-py-emoji/blob/master/LICENSE)
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
+[![codecov](https://codecov.io/github/BlueGlassBlock/mdit-py-emoji/branch/master/graph/badge.svg?token=3ZY58Z5IS1)](https://codecov.io/github/BlueGlassBlock/mdit-py-emoji)
 
 </div>
 
