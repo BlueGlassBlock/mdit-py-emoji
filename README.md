@@ -13,6 +13,16 @@
 
 </div>
 
+## Installation
+
+Choose your favorite!
+
+```sh
+pip install mdit-py-emoji
+pdm add mdit-py-emoji
+poetry add mdit-py-emoji
+```
+
 ## Usage
 
 Use it just like other plugins!
