@@ -1,5 +1,5 @@
 import re
-from typing import TYPE_CHECKING, Dict, List, Pattern, TypedDict, Union
+from typing import TYPE_CHECKING, Dict, List, Pattern, Union
 
 from markdown_it import MarkdownIt
 from markdown_it.token import Token
