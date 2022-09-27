@@ -11,6 +11,10 @@ dependencies = [
 requires-python = ">=3.7"
 readme = "README.md"
 license = {text = "MIT"}
+classifiers = [
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3"
+]
 [project.optional-dependencies]
 
 [build-system]
