@@ -6,17 +6,15 @@ authors = [
     {name = "BlueGlassBlock", email = "blueglassblock@outlook.com"},
 ]
 dependencies = [
-    "markdown-it-py<3.0.0,>=1.0.0",
+    "markdown-it-py<4.0.0,>=1.0.0",
 ]
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 readme = "README.md"
 license = {text = "MIT"}
 classifiers = [
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3"
 ]
-[project.optional-dependencies]
-
 [build-system]
 requires = ["pdm-pep517>=1.0.0"]
 build-backend = "pdm.pep517.api"
