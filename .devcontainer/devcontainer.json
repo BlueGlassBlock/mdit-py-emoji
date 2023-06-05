@@ -1,0 +1,37 @@
+{
+  "name": "Default Linux Universal",
+  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/pdm:2": {}
+  },
+  "postCreateCommand": "pdm config venv.in_project true && pdm config venv.with_pip true && pdm sync",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.analysis.diagnosticMode": "workspace",
+        "python.analysis.typeCheckingMode": "basic",
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+          }
+        },
+        "files.exclude": {
+          "**/__pycache__": true
+        },
+        "files.watcherExclude": {
+          "**/target/**": true,
+          "**/__pycache__": true
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.isort",
+        "ms-python.black-formatter",
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
